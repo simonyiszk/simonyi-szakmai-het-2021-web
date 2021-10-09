@@ -1,13 +1,13 @@
 <div class="topnav">
   <div class="container">
-    <a routerLink="">SIMONYI SZAKMAI HÉT</a>
+    <a routerLink="" class="logo">SIMONYI SZAKMAI HÉT</a>
     <button (click)="changeNav()">
       <img *ngIf="!isOpen" src="../../../assets/menu_white_24dp.svg" alt="">
       <img *ngIf="isOpen" src="../../../assets/close_white_24dp.svg" alt="">
     </button>
     <div class="topnav-right">
-      <a routerLink="/hackathon" class="line-link" [ngClass]="{'hidden': isOpen == false }">Hackathon</a>
-      <a routerLink="/minikonferencia" class="line-link" [ngClass]="{'hidden': isOpen == false }">Minikonferencia</a>
+      <a routerLink="/hackathon" class="line-link" [ngClass]="{'hidden': isOpen == false }">hackathon</a>
+      <a routerLink="/minikonferencia" class="line-link" [ngClass]="{'hidden': isOpen == false }">minikonferencia</a>
       
     </div>
   </div>

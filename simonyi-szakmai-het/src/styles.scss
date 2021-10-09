@@ -3,3 +3,18 @@ body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+    font-family: "Gobold";
+    src: url("./fonts/Gobold_Regular.otf");
+}
+@font-face {
+    font-family: "Gobold";
+    src: url("fonts/Gobold_Hollow_Bold.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Gobold_High";
+    src: url("fonts/Gobold_High.otf");
+}
+
