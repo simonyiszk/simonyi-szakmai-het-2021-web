@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { HackathonComponent } from './components/hackathon/hackathon.component';
 import { MinikonfComponent } from './components/minikonf/minikonf.component';
+import { NavComponent } from './common/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     HackathonComponent,
-    MinikonfComponent
+    MinikonfComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
