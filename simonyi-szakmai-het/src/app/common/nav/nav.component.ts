@@ -10,11 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  isOpen: boolean = false;
+  isOpen?: boolean;
 
   constructor() { }
 
   ngOnInit(): void {
+    if(window.innerWidth <= 680) {
+      this.isOpen = false;
+    } else {
+      this.isOpen = true;
+    }
   }
 
   onResize(event: { target: { innerWidth: any; }; }){
