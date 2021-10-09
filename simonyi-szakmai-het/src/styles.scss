@@ -2,6 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFF3C;
 }
 
 @font-face {
@@ -9,9 +10,8 @@ body {
     src: url("./fonts/Gobold_Regular.otf");
 }
 @font-face {
-    font-family: "Gobold";
+    font-family: "Gobold_Hollow_Bold";
     src: url("fonts/Gobold_Hollow_Bold.otf");
-    font-weight: bold;
 }
 @font-face {
     font-family: "Gobold_High";

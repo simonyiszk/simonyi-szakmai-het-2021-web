@@ -1,3 +1,65 @@
-body {
-    background-color: #1D1D1D;
+.hero-container {
+    margin: 0;
+    width: 100%;
+    margin: 17vh auto;
+    text-align: center;
+    color: #141414;
+}
+
+p {
+    margin: 0;
+}
+
+.filled {
+    font-size: 180px;
+    font-family: "Gobold";
+    line-height: 160px;
+}
+
+.hollow {
+    font-size: 107px;
+    font-family: "Gobold_Hollow_Bold";
+}
+
+.small {
+    font-size: 30px;
+    font-family: "Gobold";
+}
+
+.date {
+    font-size: 71px;
+    font-family: "Gobold_High";
+    margin-top: 6vh;
+}
+
+hr {
+    width: 528px;
+    border: 2px solid #141414;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 680px) {
+    .filled {
+        font-size: 80px;
+        line-height: 70px;
+    }
+    
+    .hollow {
+        font-size: 48px;
+    }
+
+    hr {
+        width: 240px;
+        border: 1px solid #141414;
+        border-radius: 3px;
+    }
+    
+    .small {
+        font-size: 16px;
+    }
+    
+    .date {
+        font-size: 40px;
+        margin-top: 6vh;
+    }
 }
