@@ -2,6 +2,10 @@
 	"root": true,
 	"ignorePatterns": ["projects/**/*"],
 	"extends": ["prettier", "prettier/prettier"],
+	"parserOptions": {
+		"ecmaVersion": 2020
+	},
+
 	"overrides": [
 		{
 			"files": ["*.ts"],

@@ -1,89 +1,71 @@
-.topnav {
-    overflow: hidden;
-    background-color: #141414;
-    color: white;
-    padding: 30px 5%;
-    font-size: 24px;
-    font-family: "Gobold";
+header {
+	@apply z-40 font-Gobold text-lg text-white sticky top-0 h-full p-4 flex flex-row justify-between;
+	background-color: #141414;
+	a {
+		color: #f2f2f2;
+		text-decoration: none;
+		text-align: left;
+		@apply p-1;
+		width: fit-content;
+
+		@screen lg {
+			@apply text-2xl;
+		}
+	}
 }
 
 .logo {
-    font-size: 28px;
+	@apply text-3xl;
+	@screen sm {
+		@apply text-lg;
+	}
 }
 
-.line-link::after {
-    content: '';
-    display: block;
-    height: 2px;
-    background: white;
-    transition: width .3s;
-    width: 40%;
-}
+nav {
+	@apply z-30 transition-all duration-300 px-4 pb-4 flex flex-col;
+	@apply absolute top-[75px] left-0 right-0;
+	background-color: #141414;
 
-.line-link:hover::after {
-    width: 80%;
-    transition: width .3s;
-}
-  
-.topnav a {
-    color: #f2f2f2;
-    margin: 0px 40px;
-    text-decoration: none;
-    text-align: center;
-    float: left;
-}
+	@screen sm {
+		@apply flex-row static pb-0;
+	}
 
-.topnav-right {
-    float: right;
-    z-index: 100;
-}
+	a {
+		@apply pr-16;
+		@screen sm {
+			@apply mr-4 pr-0;
+		}
 
-.container {
-    margin: 0 auto;
-    text-align: center;
+		&::after {
+			content: "";
+			display: block;
+			height: 2px;
+			background: white;
+			transition: width 0.3s;
+			width: 40%;
+		}
+
+		&:hover::after {
+			width: 80%;
+			transition: width 0.3s;
+		}
+	}
 }
 
 button {
-    display: none;
-    background: none;
-    border: none;
-    text-align: right;
-    float: right;
-    &:active {
-        outline: none;
-    }
+	display: block;
+	background: none;
+	border: none;
+	text-align: right;
+	&:active {
+		outline: none;
+	}
+
+	@screen sm {
+		@apply hidden;
+	}
 }
 
 .hidden {
-    display: none;
-    transition: .3;
-}
-
-@media screen and (max-width: 1050px) {
-    .topnav a {
-        font-size: 18px;
-        margin: 0px 16px;
-    }
-}
-
-@media screen and (max-width: 680px) {
-
-    .topnav {
-        padding: 30px 5%;
-    }
-
-    .topnav-right {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .topnav-right a {
-        margin-top: 20px;
-        text-align: left;
-    }
-    
-    button {
-        display: block;
-    }
+	@apply hidden top-[-200px];
 }

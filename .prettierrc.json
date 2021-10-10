@@ -1,6 +1,7 @@
 {
 	"useTabs": true,
 	"trailingComma": "all",
+	"htmlWhitespaceSensitivity": "ignore",
 	"overrides": [
 		{
 			"files": "*.md",

@@ -1,8 +1,9 @@
 {
-  "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "EditorConfig.EditorConfig",
-    "esbenp.prettier-vscode"
-  ],
-  "unwantedRecommendations": ["zignd.html-css-class-completion"]
+	"recommendations": [
+		"dbaeumer.vscode-eslint",
+		"editorconfig.editorconfig",
+		"esbenp.prettier-vscode",
+		"bradlc.vscode-tailwindcss"
+	],
+	"unwantedRecommendations": ["zignd.html-css-class-completion"]
 }
