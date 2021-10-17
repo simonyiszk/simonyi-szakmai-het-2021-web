@@ -18,6 +18,7 @@ import { MinikonfComponent } from './components/minikonf/minikonf.component';
 import { NavComponent } from './common/nav/nav.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
 	declarations: [
@@ -40,6 +41,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 		MatFormFieldModule,
 		MatDatepickerModule,
 		MatIconModule,
+		MatNativeDateModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

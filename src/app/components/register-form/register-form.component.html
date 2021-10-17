@@ -10,12 +10,22 @@
 		/>
 	</mat-form-field>
 	<mat-form-field appearance="outline">
-		<mat-label>Név</mat-label>
+		<mat-label>Vezetéknév</mat-label>
 		<input
 			matInput
 			placeholder="Simonyi Károly"
 			type="text"
-			formControlName="name"
+			formControlName="lastName"
+			required
+		/>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Keresztnév</mat-label>
+		<input
+			matInput
+			placeholder="Simonyi Károly"
+			type="text"
+			formControlName="firstName"
 			required
 		/>
 	</mat-form-field>
@@ -25,10 +35,10 @@
 			matInput
 			placeholder="1996-12-18"
 			type="text"
-			formControlName="birthdate"
+			formControlName="birthDate"
 			[matDatepicker]="picker"
-			disabled
-			required
+			[disabled]="true"
+			[required]="true"
 		/>
 		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
 		<mat-datepicker #picker disabled="false"></mat-datepicker>
