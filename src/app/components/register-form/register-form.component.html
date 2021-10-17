@@ -1,0 +1,77 @@
+<form [formGroup]="registerForm" (submit)="onSubmit()">
+	<mat-form-field appearance="outline">
+		<mat-label>E-mail</mat-label>
+		<input
+			matInput
+			placeholder="simonyi.karoly@pelda.hu"
+			type="email"
+			formControlName="email"
+			required
+		/>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Név</mat-label>
+		<input
+			matInput
+			placeholder="Simonyi Károly"
+			type="text"
+			formControlName="name"
+			required
+		/>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Születési idő</mat-label>
+		<input
+			matInput
+			placeholder="1996-12-18"
+			type="text"
+			formControlName="birthdate"
+			[matDatepicker]="picker"
+			disabled
+			required
+		/>
+		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+		<mat-datepicker #picker disabled="false"></mat-datepicker>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Egyetem</mat-label>
+		<input
+			matInput
+			placeholder="Budapesti Műszaki és Gazdaságtudományi Egyetem"
+			type="text"
+			formControlName="university"
+			required
+		/>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Szak</mat-label>
+		<input
+			matInput
+			placeholder="Mérnökinformatikus"
+			type="text"
+			formControlName="programme"
+			required
+		/>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Hanyadév</mat-label>
+		<input
+			matInput
+			placeholder="3"
+			type="number"
+			formControlName="year"
+			required
+		/>
+	</mat-form-field>
+	<mat-form-field appearance="outline">
+		<mat-label>Képességek</mat-label>
+		<input
+			matInput
+			placeholder="Csapatmunka, kommunikáció, ..."
+			type="text"
+			formControlName="skills"
+		/>
+	</mat-form-field>
+
+	<button type="submit"></button>
+</form>
