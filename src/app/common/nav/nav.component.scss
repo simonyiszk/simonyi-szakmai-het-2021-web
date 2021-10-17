@@ -15,7 +15,7 @@ header {
 }
 
 .logo {
-	@apply text-3xl;
+	@apply text-xl;
 	@screen sm {
 		@apply text-lg;
 	}
@@ -68,4 +68,10 @@ button {
 
 .hidden {
 	@apply hidden top-[-200px];
+}
+
+@media screen and (min-width: 350px) {
+	.logo {
+		font-size: 5px !important;
+	}
 }
