@@ -1,87 +1,73 @@
-<form [formGroup]="registerForm" (submit)="onSubmit()">
-	<mat-form-field appearance="outline">
-		<mat-label>E-mail</mat-label>
-		<input
-			matInput
-			placeholder="simonyi.karoly@pelda.hu"
-			type="email"
-			formControlName="email"
-			required
-		/>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Vezetéknév</mat-label>
-		<input
-			matInput
-			placeholder="Simonyi Károly"
-			type="text"
-			formControlName="lastName"
-			required
-		/>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Keresztnév</mat-label>
-		<input
-			matInput
-			placeholder="Simonyi Károly"
-			type="text"
-			formControlName="firstName"
-			required
-		/>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Születési idő</mat-label>
-		<input
-			matInput
-			placeholder="1996-12-18"
-			type="text"
-			formControlName="birthDate"
-			[matDatepicker]="picker"
-			[disabled]="true"
-			[required]="true"
-		/>
-		<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-		<mat-datepicker #picker disabled="false"></mat-datepicker>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Egyetem</mat-label>
-		<input
-			matInput
-			placeholder="Budapesti Műszaki és Gazdaságtudományi Egyetem"
-			type="text"
-			formControlName="university"
-			required
-		/>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Szak</mat-label>
-		<input
-			matInput
-			placeholder="Mérnökinformatikus"
-			type="text"
-			formControlName="programme"
-			required
-		/>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Hanyadév</mat-label>
-		<input
-			matInput
-			placeholder="3"
-			type="number"
-			formControlName="year"
-			required
-		/>
-	</mat-form-field>
-	<mat-form-field appearance="outline">
-		<mat-label>Képességek</mat-label>
-		<input
-			matInput
-			placeholder="Csapatmunka, kommunikáció, ..."
-			type="text"
-			formControlName="skills"
-		/>
-	</mat-form-field>
+<div>
+	<form [formGroup]="registerForm" (submit)="onSubmit()" class="register-form">
+		<div class="form-control">
+			<label for="email">
+				E-mail
+				<sup>*</sup>
+			</label>
+			<input
+				id="email"
+				placeholder="simonyi.karoly@pelda.hu"
+				type="email"
+				formControlName="email"
+				required
+			/>
+			<p>Kérlek helyes e-mail címet adj meg!</p>
+		</div>
 
-	<button type="submit"></button>
-</form>
+		<div class="form-control">
+			<label for="name">
+				Név
+				<sup>*</sup>
+			</label>
+			<input
+				id="name"
+				placeholder="Simonyi Károly"
+				type="text"
+				formControlName="name"
+				required
+			/>
+			<p>Kötelező nevet megadni!</p>
+		</div>
+		<div class="form-control">
+			<label for="birthDate">
+				Születési dátum
+				<sup>*</sup>
+			</label>
+			<input
+				id="birthDate"
+				placeholder="1996.12.18."
+				type="text"
+				formControlName="birthDate"
+				required
+			/>
+			<p>Kérlek helyes születési dátumot adj meg!/p></p>
+		</div>
+
+		<div class="form-control">
+			<label for="university">Egyetem</label>
+			<input
+				id="university"
+				placeholder="Budapesti Műszaki és Gazdaságtudományi Egyetem"
+				type="text"
+				formControlName="university"
+			/>
+		</div>
+		<div class="form-control">
+			<label for="programme">Szak</label>
+			<input
+				id="programme"
+				placeholder="Mérnökinformatikus"
+				type="text"
+				formControlName="programme"
+			/>
+		</div>
+		<div class="form-control">
+			<label for="year">Hanyadév</label>
+			<input id="year" placeholder="3" type="number" formControlName="year" />
+		</div>
+
+		<button type="submit" class="register-btn">Regisztrálás</button>
+		<button type="submit" class="cancel-btn">Mégse</button>
+	</form>
+</div>

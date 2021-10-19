@@ -10,6 +10,4 @@ import { Observable } from 'rxjs';
 	templateUrl: './hackathon.component.html',
 	styleUrls: ['./hackathon.component.scss'],
 })
-export class HackathonComponent {
-	//Átmeneti példakód a firebase kipróbáláshoz, és megmutatni, hogy hogyan működik.
-}
+export class HackathonComponent {}

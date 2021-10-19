@@ -1,1 +1,95 @@
 @import "src/assets/colors.scss";
+
+:host {
+	overflow: scroll;
+}
+
+.register-form {
+	background-color: $darkgray;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	color: $white;
+	max-width: 400px;
+}
+
+.form-control {
+	margin-bottom: 13px;
+
+	&:last-of-type {
+		margin-bottom: 20px;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 5px;
+
+		sup {
+			color: red;
+		}
+	}
+
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	/* Firefox */
+	input[type="number"] {
+		-moz-appearance: textfield;
+	}
+
+	input {
+		width: 100%;
+		border: 1px solid $yellow;
+		background-color: $lightgray;
+		border-radius: 10px;
+		box-sizing: border-box;
+
+		&:focus {
+			-webkit-box-shadow: none;
+			box-shadow: none;
+			border-color: $white;
+		}
+
+		+ p {
+			color: red;
+			display: none;
+		}
+
+		&.ng-touched.ng-invalid {
+			border-color: red;
+
+			+ p {
+				display: block;
+			}
+		}
+	}
+}
+
+button.register-btn {
+	background-color: $yellow;
+	color: $darkgray;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 5px 10px 5px 10px;
+	font-weight: bold;
+	border-radius: 10px;
+	border: 2px solid $yellow;
+	margin-bottom: 15px;
+
+	&:hover {
+		background-color: $lightgray;
+		color: $white;
+	}
+}
+
+button.cancel-btn {
+	text-decoration: underline;
+
+	&:hover {
+		color: $yellow;
+	}
+}

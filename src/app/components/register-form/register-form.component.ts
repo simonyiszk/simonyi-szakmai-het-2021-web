@@ -15,13 +15,11 @@ export class RegisterFormComponent {
 
 	registerForm = this.fb.group({
 		email: ['', Validators.required, Validators.email],
-		firstName: ['', Validators.required],
-		lastName: ['', Validators.required],
+		name: ['', Validators.required],
 		birthDate: ['', Validators.required],
-		university: ['', Validators.required],
-		programme: ['', Validators.required],
-		year: ['', Validators.required],
-		skills: [''],
+		university: [''],
+		programme: [''],
+		year: [''],
 	});
 
 	constructor(private fb: FormBuilder, private firestore: AngularFirestore) {
