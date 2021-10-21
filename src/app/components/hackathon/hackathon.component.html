@@ -1,1 +1,10 @@
-<app-register-form></app-register-form>
+<div>asdas asdasd asda</div>
+<button type="button" (click)="setIsOpen()">asd</button>
+<app-register-form
+	[@openClose]="isOpen ? true : false"
+	[isOpen]="isOpen"
+	(formClosed)="closeForm()"
+	#registerForm
+></app-register-form>
+
+<div>asdas asdasd asda</div>
