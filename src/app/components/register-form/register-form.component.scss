@@ -16,13 +16,16 @@ input[type="number"] {
 }
 
 p {
-	color: red;
+	color: $warning-red;
 }
 
 input {
 	border: 1px solid $yellow;
 	background-color: $lightgray;
 	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
 
 	&:focus {
 		-webkit-box-shadow: none;
@@ -35,7 +38,7 @@ input {
 	}
 
 	&.ng-touched.ng-invalid {
-		border-color: red;
+		border-color: $warning-red;
 
 		+ p {
 			display: block;
@@ -88,6 +91,10 @@ h2 {
 		font-weight: bold;
 		font-size: 15pt;
 		margin-bottom: 8px;
+
+		sup {
+			color: $warning-red;
+		}
 	}
 }
 
@@ -101,6 +108,7 @@ h2 {
 	input {
 		border-radius: 10px;
 		width: 100%;
+		margin-bottom: 5px;
 	}
 
 	label {
@@ -108,7 +116,7 @@ h2 {
 		margin-bottom: 5px;
 
 		sup {
-			color: red;
+			color: $warning-red;
 		}
 	}
 }

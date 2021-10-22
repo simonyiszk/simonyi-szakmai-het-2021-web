@@ -29,6 +29,7 @@ export class HackathonComponent {
 	regForm!: ElementRef;
 
 	isOpen = false;
+	isFormSent = false;
 
 	setIsOpen(): void {
 		this.isOpen = !this.isOpen;

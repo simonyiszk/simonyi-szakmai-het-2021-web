@@ -1,10 +1,13 @@
-<div>asdas asdasd asda</div>
-<button type="button" (click)="setIsOpen()">asd</button>
+<div *ngIf="!isOpen" class="register-container">
+	<button *ngIf="!isFormSent" type="button" (click)="setIsOpen()">
+		Regisztrálok!
+	</button>
+	<h2 *ngIf="isFormSent">Köszönjük a regisztrációdat!</h2>
+</div>
 <app-register-form
 	[@openClose]="isOpen ? true : false"
 	[isOpen]="isOpen"
 	(formClosed)="closeForm()"
+	(formSent)="isFormSent = true"
 	#registerForm
 ></app-register-form>
-
-<div>asdas asdasd asda</div>

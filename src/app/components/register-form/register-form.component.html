@@ -7,25 +7,48 @@
 >
 	<h2>Regisztráció</h2>
 	<div formGroupName="events" class="form-group">
-		<h3>Események</h3>
+		<h3>
+			Események
+			<sup>*</sup>
+		</h3>
 		<div class="checkbox">
-			<input type="checkbox" id="profNight" formControlName="profNight" />
+			<input
+				type="checkbox"
+				id="profNight"
+				formControlName="profNight"
+				(click)="setEventsTouched()"
+			/>
 			<label for="profNight">Szakmai est - 11.08.</label>
 		</div>
 		<div class="checkbox">
-			<input type="checkbox" id="confDayOne" formControlName="confDayOne" />
+			<input
+				type="checkbox"
+				id="confDayOne"
+				formControlName="confDayOne"
+				(click)="setEventsTouched()"
+			/>
 			<label for="confDayOne">Minikonferencia 1. nap - 11.09.</label>
 		</div>
 		<div class="checkbox">
-			<input type="checkbox" id="confDayTwo" formControlName="confDayTwo" />
+			<input
+				type="checkbox"
+				id="confDayTwo"
+				formControlName="confDayTwo"
+				(click)="setEventsTouched()"
+			/>
 			<label for="confDayTwo">Minikonferencia 2. nap - 11.10.</label>
 		</div>
 		<div class="checkbox">
-			<input type="checkbox" id="birthday" formControlName="birthday" />
+			<input
+				type="checkbox"
+				id="birthday"
+				formControlName="birthday"
+				(click)="setEventsTouched()"
+			/>
 			<label for="birthday">Születésnap - 11.12.</label>
 		</div>
 
-		<p [hidden]="isCheckboxValid">Kérlek helyes e-mail címet adj meg!</p>
+		<p [hidden]="isCheckboxErrorHidden">Legalább egy eseményt jelölj be!</p>
 	</div>
 	<div formGroupName="data" class="form-group">
 		<h3>Adatok</h3>
@@ -65,12 +88,12 @@
 			</label>
 			<input
 				id="birthDate"
-				placeholder="1996.12.18."
+				placeholder="ÉÉÉÉ.HH.NN."
 				type="text"
 				formControlName="birthDate"
 				required
 			/>
-			<p>Kérlek helyes születési dátumot adj meg!/p></p>
+			<p>Kérlek adj meg egy helyes dátumot 'ÉÉÉÉ.HH.NN.' formátumban!</p>
 		</div>
 
 		<div class="form-control">
