@@ -5,6 +5,7 @@ import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 import { environment } from '../environments/environment';
 
@@ -32,6 +33,7 @@ import { RegisterFormComponent } from './components/register-form/register-form.
 		BrowserAnimationsModule,
 		FormsModule,
 		ReactiveFormsModule,
+		NgSelectModule,
 	],
 	providers: [],
 	bootstrap: [AppComponent],

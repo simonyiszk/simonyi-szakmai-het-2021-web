@@ -95,6 +95,30 @@
 			/>
 			<p>Kérlek adj meg egy helyes dátumot 'ÉÉÉÉ.HH.NN.' formátumban!</p>
 		</div>
+		<div class="form-control">
+			<label for="universityOfAdvancedStudies">
+				Szakkollégium
+				<sup>*</sup>
+			</label>
+			<ng-select
+				placeholder="Válassz!"
+				notFoundText="Nem találtuk a szakkollégiumodat"
+				formControlName="universityOfAdvancedStudies"
+				required
+			>
+				<ng-option *ngFor="let item of list" [value]="item">
+					{{ item }}
+				</ng-option>
+			</ng-select>
+			<input
+				*ngIf="isOtherSelected"
+				placeholder="Simonyi Károly Szakkollégium"
+				type="text"
+				formControlName="otherUniOfAdvStudies"
+				required
+			/>
+			<p>Kérlek add meg a szakkollégiumod!</p>
+		</div>
 
 		<div class="form-control">
 			<label for="university">Egyetem</label>
@@ -118,16 +142,18 @@
 			<label for="year">Hanyadév</label>
 			<input id="year" placeholder="3" type="number" formControlName="year" />
 		</div>
-		<div class="form-control">
-			<label for="universityOfAdvancedStudies">Szakkollégium</label>
-			<input
-				id="universityOfAdvancedStudies"
-				placeholder="Simonyi Károly Szakkollégium"
-				type="text"
-				formControlName="universityOfAdvancedStudies"
-			/>
-		</div>
 	</div>
+
+	<div class="checkbox">
+		<input
+			type="checkbox"
+			id="accomodation"
+			[(ngModel)]="accomodation"
+			[disabled]="!isBirthdaySelected"
+		/>
+		<label for="accomodation">Szeretnék szállást kérni a születésnapra.</label>
+	</div>
+
 	<button type="submit" class="register-btn">Regisztrálok</button>
 	<button type="button" class="cancel-btn" (click)="onClose()">Mégsem</button>
 </form>

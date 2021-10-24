@@ -5,17 +5,12 @@ import {
 	Input,
 	Output,
 } from '@angular/core';
-import {
-	AbstractControl,
-	FormBuilder,
-	FormGroup,
-	Validators,
-} from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import {
 	AngularFirestore,
 	AngularFirestoreCollection,
-	DocumentData,
 } from '@angular/fire/compat/firestore';
+import { uniOfAdvStudies } from './advancedStudies.constants';
 
 @Component({
 	selector: 'app-register-form',
@@ -31,6 +26,9 @@ export class RegisterFormComponent {
 	private professionalNightCollection: AngularFirestoreCollection;
 	private miniConfCollection: AngularFirestoreCollection;
 	private birthdayCollection: AngularFirestoreCollection;
+
+	list = uniOfAdvStudies;
+	accomodation = false;
 
 	registerForm: FormGroup;
 	constructor(
@@ -65,9 +63,13 @@ export class RegisterFormComponent {
 				university: [null],
 				programme: [null],
 				year: [null],
-				universityOfAdvancedStudies: [null],
+				universityOfAdvancedStudies: ['', Validators.required],
+				otherUniOfAdvStudies: [null],
 			}),
 		});
+
+		this.registerForm.get('data')?.markAllAsTouched();
+		this.registerForm.get('data')?.reset();
 	}
 
 	onSubmit(): void {
@@ -99,6 +101,7 @@ export class RegisterFormComponent {
 			}
 			if (eventsGroup.get('birthday')?.value) {
 				this.birthdayCollection.add(data);
+				console.log(data);
 			}
 
 			this.formSent.emit();
@@ -113,6 +116,21 @@ export class RegisterFormComponent {
 	setEventsTouched(): void {
 		const eventsGroup = this.registerForm.get('events') as FormGroup;
 		eventsGroup.markAllAsTouched();
+	}
+
+	get isOtherSelected(): boolean {
+		return (
+			(this.registerForm.get('data') as FormGroup).get(
+				'universityOfAdvancedStudies',
+			)?.value === 'Egyéb'
+		);
+	}
+
+	get isBirthdaySelected(): boolean {
+		return (
+			(this.registerForm.get('events') as FormGroup).get('birthday')?.value ===
+			true
+		);
 	}
 
 	get isFormFullWidth(): boolean {
@@ -132,6 +150,6 @@ export class RegisterFormComponent {
 			(key) => eventsGroup.controls[key].touched,
 		);
 
-		return (!eventsGroup.touched && !controlsTouched) || !!oneChecked;
+		return !controlsTouched || !!oneChecked;
 	}
 }
