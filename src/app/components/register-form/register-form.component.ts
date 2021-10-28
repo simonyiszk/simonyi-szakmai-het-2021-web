@@ -50,10 +50,10 @@ export class RegisterFormComponent {
 				birthday: [false],
 			}),
 			data: fb.group({
-				email: [null, [Validators.required, Validators.email]],
-				name: [null, Validators.required],
+				email: ['', [Validators.required, Validators.email]],
+				name: ['', Validators.required],
 				birthDate: [
-					null,
+					'',
 					[
 						Validators.required,
 						Validators.pattern(
@@ -61,16 +61,13 @@ export class RegisterFormComponent {
 						),
 					],
 				],
-				university: [null],
-				programme: [null],
-				year: [null],
-				universityOfAdvancedStudies: ['', Validators.required],
-				otherUniOfAdvStudies: [null],
+				university: [''],
+				programme: [''],
+				year: [''],
+				universityOfAdvancedStudies: [null, Validators.required],
+				otherUniOfAdvStudies: [''],
 			}),
 		});
-
-		this.registerForm.get('data')?.markAllAsTouched();
-		this.registerForm.get('data')?.reset();
 	}
 
 	onSubmit(): void {

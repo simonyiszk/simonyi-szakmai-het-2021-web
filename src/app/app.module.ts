@@ -15,6 +15,7 @@ import { HackathonComponent } from './components/hackathon/hackathon.component';
 import { MinikonfComponent } from './components/minikonf/minikonf.component';
 import { NavComponent } from './common/nav/nav.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
+import { RegisterFormButtonComponent } from './components/register-form-button/register-form-button.component';
 
 @NgModule({
 	declarations: [
@@ -24,6 +25,7 @@ import { RegisterFormComponent } from './components/register-form/register-form.
 		MinikonfComponent,
 		NavComponent,
 		RegisterFormComponent,
+  RegisterFormButtonComponent,
 	],
 	imports: [
 		BrowserModule,
