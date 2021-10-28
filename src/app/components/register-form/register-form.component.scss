@@ -1,0 +1,158 @@
+@import "src/assets/colors.scss";
+
+:host {
+	width: 100%;
+	display: block;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+
+p {
+	color: $warning-red;
+}
+
+input {
+	border: 1px solid $yellow;
+	background-color: $lightgray;
+	box-sizing: border-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
+	&:focus {
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		border-color: $white;
+	}
+
+	+ p {
+		display: none;
+	}
+
+	&.ng-touched.ng-invalid {
+		border-color: $warning-red;
+
+		+ p {
+			display: block;
+		}
+	}
+}
+
+h2 {
+	font-weight: bold;
+	font-size: 18pt;
+	padding-bottom: 10px;
+	border-bottom: 1px solid $lightgray;
+	margin-bottom: 10px;
+}
+
+.register-form {
+	padding: 20px 30px 20px 30px;
+	color: $white;
+	max-width: 400px;
+	height: 100%;
+	background-color: $darkgray;
+	overflow: hidden;
+}
+
+.modal-view {
+	border-radius: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.checkbox {
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+
+	&.disabled {
+		opacity: 0.6;
+	}
+
+	&.accomodation {
+		margin-bottom: 20px;
+	}
+
+	input {
+		border-radius: 4px;
+		background-color: $darkgray;
+		border-color: $yellow;
+		margin-right: 11px;
+	}
+}
+
+.form-group {
+	&:first-of-type {
+		border-bottom: 1px solid $lightgray;
+		margin-bottom: 10px;
+		padding-bottom: 10px;
+	}
+
+	h3 {
+		font-weight: bold;
+		font-size: 15pt;
+		margin-bottom: 8px;
+
+		sup {
+			color: $warning-red;
+		}
+	}
+}
+
+.form-control {
+	margin-bottom: 13px;
+
+	input {
+		border-radius: 10px;
+		width: 100%;
+		margin-bottom: 5px;
+		height: 100%;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 5px;
+
+		sup {
+			color: $warning-red;
+		}
+	}
+}
+
+button {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+
+	&.register-btn {
+		background-color: $yellow;
+		color: $darkgray;
+		padding: 5px 10px 5px 10px;
+		font-weight: bold;
+		border-radius: 10px;
+		border: 2px solid $yellow;
+		margin-bottom: 15px;
+
+		&:hover {
+			background-color: $lightgray;
+			color: $white;
+		}
+	}
+
+	&.cancel-btn {
+		text-decoration: underline;
+
+		&:hover {
+			color: $yellow;
+		}
+	}
+}

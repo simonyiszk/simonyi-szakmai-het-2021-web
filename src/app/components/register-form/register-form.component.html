@@ -1,0 +1,163 @@
+<form
+	*ngIf="isOpen"
+	[formGroup]="registerForm"
+	[ngClass]="{ 'modal-view': !isFormFullWidth }"
+	(submit)="onSubmit()"
+	class="register-form"
+>
+	<h2>Regisztráció</h2>
+	<div formGroupName="events" class="form-group">
+		<h3>
+			Események
+			<sup>*</sup>
+		</h3>
+		<div class="checkbox">
+			<input
+				type="checkbox"
+				id="profNight"
+				formControlName="profNight"
+				(click)="setEventsTouched()"
+			/>
+			<label for="profNight">Szakmai est - 11.08.</label>
+		</div>
+		<div class="checkbox">
+			<input
+				type="checkbox"
+				id="confDayOne"
+				formControlName="confDayOne"
+				(click)="setEventsTouched()"
+			/>
+			<label for="confDayOne">Minikonferencia 1. nap - 11.09.</label>
+		</div>
+		<div class="checkbox">
+			<input
+				type="checkbox"
+				id="confDayTwo"
+				formControlName="confDayTwo"
+				(click)="setEventsTouched()"
+			/>
+			<label for="confDayTwo">Minikonferencia 2. nap - 11.10.</label>
+		</div>
+		<div class="checkbox">
+			<input
+				type="checkbox"
+				id="birthday"
+				formControlName="birthday"
+				(click)="setAccomodation()"
+			/>
+			<label for="birthday">Születésnap - 11.12.</label>
+		</div>
+
+		<p [hidden]="isCheckboxErrorHidden">Legalább egy eseményt jelölj be!</p>
+	</div>
+	<div formGroupName="data" class="form-group">
+		<h3>Adatok</h3>
+		<div class="form-control">
+			<label for="email">
+				E-mail
+				<sup>*</sup>
+			</label>
+			<input
+				id="email"
+				placeholder="simonyi.karoly@pelda.hu"
+				type="email"
+				formControlName="email"
+				required
+			/>
+			<p>Kérlek helyes e-mail címet adj meg!</p>
+		</div>
+
+		<div class="form-control">
+			<label for="name">
+				Teljes név
+				<sup>*</sup>
+			</label>
+			<input
+				id="name"
+				placeholder="Simonyi Károly"
+				type="text"
+				formControlName="name"
+				required
+			/>
+			<p>Kötelező nevet megadni!</p>
+		</div>
+		<div class="form-control">
+			<label for="birthDate">
+				Születési dátum
+				<sup>*</sup>
+			</label>
+			<input
+				id="birthDate"
+				placeholder="ÉÉÉÉ.HH.NN."
+				type="text"
+				formControlName="birthDate"
+				required
+			/>
+			<p>Kérlek adj meg egy helyes dátumot 'ÉÉÉÉ.HH.NN.' formátumban!</p>
+		</div>
+		<div class="form-control">
+			<label for="universityOfAdvancedStudies">
+				Szakkollégium
+				<sup>*</sup>
+			</label>
+			<ng-select
+				placeholder="Válassz!"
+				notFoundText="Nem találtuk a szakkollégiumodat"
+				formControlName="universityOfAdvancedStudies"
+				required
+			>
+				<ng-option *ngFor="let item of list" [value]="item">
+					{{ item }}
+				</ng-option>
+			</ng-select>
+			<input
+				*ngIf="isOtherSelected"
+				placeholder="Simonyi Károly Szakkollégium"
+				type="text"
+				formControlName="otherUniOfAdvStudies"
+				required
+			/>
+			<p>Kérlek add meg a szakkollégiumod!</p>
+		</div>
+
+		<div class="form-control">
+			<label for="university">Egyetem</label>
+			<input
+				id="university"
+				placeholder="Budapesti Műszaki és Gazdaságtudományi Egyetem"
+				type="text"
+				formControlName="university"
+			/>
+		</div>
+		<div class="form-control">
+			<label for="programme">Szak</label>
+			<input
+				id="programme"
+				placeholder="Mérnökinformatikus"
+				type="text"
+				formControlName="programme"
+			/>
+		</div>
+		<div class="form-control">
+			<label for="year">Hanyadév</label>
+			<input id="year" placeholder="3" type="number" formControlName="year" />
+		</div>
+	</div>
+
+	<div
+		class="checkbox accomodation"
+		[ngClass]="{ disabled: isAccomodationDisabled }"
+	>
+		<input
+			type="checkbox"
+			id="accomodation"
+			[(ngModel)]="accomodation"
+			[ngModelOptions]="{ standalone: true }"
+			[disabled]="isAccomodationDisabled"
+		/>
+		<label for="accomodation">Szeretnék szállást kérni a születésnapra.</label>
+	</div>
+
+	<button type="submit" class="register-btn">Regisztrálok</button>
+	<button type="button" class="cancel-btn" (click)="onClose()">Mégsem</button>
+</form>
