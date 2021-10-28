@@ -51,11 +51,7 @@ export class RegisterFormComponent {
 			}),
 			data: fb.group({
 				email: [null, [Validators.required, Validators.email]],
-				name: [
-					null,
-					Validators.required,
-					Validators.pattern(/^(?![\s.]+$)[a-zA-Z\s.]*$/),
-				],
+				name: [null, Validators.required],
 				birthDate: [
 					null,
 					[
