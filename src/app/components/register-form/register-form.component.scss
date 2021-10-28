@@ -71,20 +71,30 @@ h2 {
 
 .checkbox {
 	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+
+	&.disabled {
+		opacity: 0.6;
+	}
+
+	&.accomodation {
+		margin-bottom: 20px;
+	}
+
 	input {
 		border-radius: 4px;
 		background-color: $darkgray;
 		border-color: $yellow;
-		margin-right: 10px;
+		margin-right: 11px;
 	}
 }
 
 .form-group {
-	padding-bottom: 10px;
-
 	&:first-of-type {
 		border-bottom: 1px solid $lightgray;
 		margin-bottom: 10px;
+		padding-bottom: 10px;
 	}
 
 	h3 {
@@ -100,10 +110,6 @@ h2 {
 
 .form-control {
 	margin-bottom: 13px;
-
-	&:last-of-type {
-		margin-bottom: 20px;
-	}
 
 	input {
 		border-radius: 10px;

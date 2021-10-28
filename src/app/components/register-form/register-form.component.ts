@@ -29,6 +29,7 @@ export class RegisterFormComponent {
 
 	list = uniOfAdvStudies;
 	accomodation = false;
+	isAccomodationDisabled = true;
 
 	registerForm: FormGroup;
 	constructor(
@@ -50,7 +51,11 @@ export class RegisterFormComponent {
 			}),
 			data: fb.group({
 				email: [null, [Validators.required, Validators.email]],
-				name: [null, Validators.required],
+				name: [
+					null,
+					Validators.required,
+					Validators.pattern(/^(?![\s.]+$)[a-zA-Z\s.]*$/),
+				],
 				birthDate: [
 					null,
 					[
@@ -100,8 +105,8 @@ export class RegisterFormComponent {
 				this.miniConfCollection.add(confData);
 			}
 			if (eventsGroup.get('birthday')?.value) {
-				this.birthdayCollection.add(data);
-				console.log(data);
+				const bdData = { ...data, accomodation: this.accomodation };
+				this.birthdayCollection.add(bdData);
 			}
 
 			this.formSent.emit();
@@ -126,11 +131,12 @@ export class RegisterFormComponent {
 		);
 	}
 
-	get isBirthdaySelected(): boolean {
-		return (
-			(this.registerForm.get('events') as FormGroup).get('birthday')?.value ===
-			true
-		);
+	setAccomodation(): void {
+		this.setEventsTouched();
+		this.isAccomodationDisabled = !!(
+			this.registerForm.get('events') as FormGroup
+		).get('birthday')?.value;
+		if (this.isAccomodationDisabled) this.accomodation = false;
 	}
 
 	get isFormFullWidth(): boolean {

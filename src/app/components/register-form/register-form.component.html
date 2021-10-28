@@ -43,7 +43,7 @@
 				type="checkbox"
 				id="birthday"
 				formControlName="birthday"
-				(click)="setEventsTouched()"
+				(click)="setAccomodation()"
 			/>
 			<label for="birthday">Születésnap - 11.12.</label>
 		</div>
@@ -69,7 +69,7 @@
 
 		<div class="form-control">
 			<label for="name">
-				Név
+				Teljes név
 				<sup>*</sup>
 			</label>
 			<input
@@ -144,12 +144,16 @@
 		</div>
 	</div>
 
-	<div class="checkbox">
+	<div
+		class="checkbox accomodation"
+		[ngClass]="{ disabled: isAccomodationDisabled }"
+	>
 		<input
 			type="checkbox"
 			id="accomodation"
 			[(ngModel)]="accomodation"
-			[disabled]="!isBirthdaySelected"
+			[ngModelOptions]="{ standalone: true }"
+			[disabled]="isAccomodationDisabled"
 		/>
 		<label for="accomodation">Szeretnék szállást kérni a születésnapra.</label>
 	</div>
