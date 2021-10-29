@@ -11,6 +11,10 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { HackathonComponent } from './components/hackathon/hackathon.component';
 import { MinikonfComponent } from './components/minikonf/minikonf.component';
 import { NavComponent } from './common/nav/nav.component';
+import { JelentkezesComponent } from './components/jelentkezes/jelentkezes.component';
+import { SzulinapComponent } from './components/szulinap/szulinap.component';
+import { CtaButtonComponent } from './common/cta-button/cta-button.component';
+import { HamarosanComponent } from './components/hamarosan/hamarosan.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,10 @@ import { NavComponent } from './common/nav/nav.component';
     HackathonComponent,
     MinikonfComponent,
     NavComponent,
+    JelentkezesComponent,
+    SzulinapComponent,
+    CtaButtonComponent,
+    HamarosanComponent,
   ],
   imports: [
     BrowserModule,
