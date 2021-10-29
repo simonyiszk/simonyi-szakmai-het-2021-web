@@ -14,6 +14,10 @@ import { LandingPageComponent } from './components/landing-page/landing-page.com
 import { HackathonComponent } from './components/hackathon/hackathon.component';
 import { MinikonfComponent } from './components/minikonf/minikonf.component';
 import { NavComponent } from './common/nav/nav.component';
+import { JelentkezesComponent } from './components/jelentkezes/jelentkezes.component';
+import { SzulinapComponent } from './components/szulinap/szulinap.component';
+import { CtaButtonComponent } from './common/cta-button/cta-button.component';
+import { HamarosanComponent } from './components/hamarosan/hamarosan.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisterFormButtonComponent } from './components/register-form-button/register-form-button.component';
 
@@ -24,8 +28,12 @@ import { RegisterFormButtonComponent } from './components/register-form-button/r
 		HackathonComponent,
 		MinikonfComponent,
 		NavComponent,
+		JelentkezesComponent,
+		SzulinapComponent,
+		CtaButtonComponent,
+		HamarosanComponent,
 		RegisterFormComponent,
-  RegisterFormButtonComponent,
+		RegisterFormButtonComponent,
 	],
 	imports: [
 		BrowserModule,
