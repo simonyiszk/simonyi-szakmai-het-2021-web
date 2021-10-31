@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Component({
 	selector: 'app-nav',
@@ -12,6 +13,8 @@ export class NavComponent implements OnInit {
 	isOpen?: boolean;
 
 	constructor() {}
+
+	url = environment.url;
 
 	ngOnInit(): void {
 		if (window.innerWidth <= 640) {
