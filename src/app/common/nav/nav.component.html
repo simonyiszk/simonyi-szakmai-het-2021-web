@@ -5,8 +5,9 @@
 		<img *ngIf="isOpen" src="../../../assets/close_white_24dp.svg" alt="" />
 	</button>
 	<nav [ngClass]="{ hidden: isOpen === false }">
-		<a routerLink="/minikonferencia">minikonferencia</a>
-		<a routerLink="/szulinap">szülinap</a>
+		<a routerLink="" (click)="onClick('#szakmaiest')">szakmai est</a>
+		<a routerLink="" (click)="onClick('#minikonf')">minikonferencia</a>
+		<a routerLink="" (click)="onClick('#szulinap')">szülinap</a>
 		<a routerLink="/jelentkezes">jelentkezés</a>
 	</nav>
 </header>

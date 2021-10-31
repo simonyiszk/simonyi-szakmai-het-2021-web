@@ -1,5 +1,20 @@
-button {
-	margin-top: 60px;
+.outline {
+	padding: 10px 50px;
+	background-color: transparent;
+	color: #141414;
+	border: 6px solid #141414;
+	border-radius: 26px;
+	font-size: 26px;
+	font-family: "Gobold";
+	transition: 0.3s;
+
+	&:hover {
+		background-color: #141414;
+		color: white;
+	}
+}
+
+.filled {
 	padding: 20px 50px;
 	background-color: #141414;
 	color: white;

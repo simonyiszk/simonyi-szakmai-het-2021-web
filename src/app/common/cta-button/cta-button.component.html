@@ -1,1 +1,6 @@
-<button routerLink="/jelentkezes">Jelentkezés</button>
+<button
+	[ngClass]="outline === true ? 'outline' : 'filled'"
+	[routerLink]="route ? route : ''"
+>
+	{{ text }}
+</button>

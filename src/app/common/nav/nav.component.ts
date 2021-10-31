@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,7 +12,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavComponent implements OnInit {
 	isOpen?: boolean;
 
-	constructor() {}
+	constructor(private viewportScroller: ViewportScroller) {}
 
 	ngOnInit(): void {
 		if (window.innerWidth <= 640) {
@@ -27,6 +28,10 @@ export class NavComponent implements OnInit {
 		} else {
 			this.isOpen = false;
 		}
+	}
+
+	onClick(elementId: string): void {
+		this.viewportScroller.scrollToAnchor(elementId);
 	}
 
 	changeNav() {
