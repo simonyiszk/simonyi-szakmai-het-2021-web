@@ -12,5 +12,9 @@ export class CtaButtonComponent implements OnInit {
 	@Input() text: string = '';
 	@Input() outline: boolean = false;
 
+	onClick() {
+		window.scroll(0, 0);
+	}
+
 	ngOnInit(): void {}
 }

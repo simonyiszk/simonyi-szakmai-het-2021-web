@@ -1,4 +1,5 @@
 <button
+	(click)="onClick()"
 	[ngClass]="outline === true ? 'outline' : 'filled'"
 	[routerLink]="route ? route : ''"
 >
