@@ -1,8 +1,8 @@
 <header>
 	<a routerLink="" class="logo">SIMONYI SZAKMAI HÉT</a>
 	<button (click)="changeNav()">
-		<img *ngIf="!isOpen" src="{{ url }}/assets/menu_white_24dp.svg" alt="" />
-		<img *ngIf="isOpen" src="{{ url }}/assets/close_white_24dp.svg" alt="" />
+		<img *ngIf="!isOpen" src="/assets/menu_white_24dp.svg" alt="" />
+		<img *ngIf="isOpen" src="/assets/close_white_24dp.svg" alt="" />
 	</button>
 	<nav [ngClass]="{ hidden: isOpen === false }">
 		<a routerLink="" (click)="onClick('#szakmaiest')">szakmai est</a>
