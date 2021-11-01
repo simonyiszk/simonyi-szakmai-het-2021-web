@@ -20,6 +20,7 @@ import { CtaButtonComponent } from './common/cta-button/cta-button.component';
 import { HamarosanComponent } from './components/hamarosan/hamarosan.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisterFormButtonComponent } from './components/register-form-button/register-form-button.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
 	declarations: [
@@ -34,6 +35,7 @@ import { RegisterFormButtonComponent } from './components/register-form-button/r
 		HamarosanComponent,
 		RegisterFormComponent,
 		RegisterFormButtonComponent,
+  FooterComponent,
 	],
 	imports: [
 		BrowserModule,
