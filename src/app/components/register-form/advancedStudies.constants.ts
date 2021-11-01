@@ -1,5 +1,7 @@
 export const uniOfAdvStudies = [
 	'',
+	'Nincs',
+	'Egyéb',
 	'Simonyi Károly Szakkollégium',
 	'Batthyány Lajos Szakkollégium',
 	'Bercsényi Építész Szakkollégium',
@@ -54,6 +56,4 @@ export const uniOfAdvStudies = [
 	'Társadalomelméleti Kollégium',
 	'Tormay Béla Szakkollégium',
 	'Zsuffa István Szakkollégium',
-	'Nincs',
-	'Egyéb',
 ];
