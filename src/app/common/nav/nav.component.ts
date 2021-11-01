@@ -1,3 +1,4 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -12,12 +13,12 @@ import { environment } from 'src/environments/environment';
 export class NavComponent implements OnInit {
 	isOpen?: boolean;
 
-	constructor() {}
+	constructor(private viewportScroller: ViewportScroller) {}
 
 	url = environment.url;
 
 	ngOnInit(): void {
-		if (window.innerWidth <= 640) {
+		if (window.innerWidth <= 768) {
 			this.isOpen = false;
 		} else {
 			this.isOpen = true;
@@ -25,14 +26,23 @@ export class NavComponent implements OnInit {
 	}
 
 	onResize(event: { target: { innerWidth: any } }) {
-		if (event.target.innerWidth > 640) {
+		if (event.target.innerWidth > 768) {
 			this.isOpen = true;
 		} else {
 			this.isOpen = false;
 		}
 	}
 
+	onClick(elementId: string): void {
+		this.isOpen = false;
+		this.viewportScroller.scrollToAnchor(elementId);
+	}
+
 	changeNav() {
 		this.isOpen = !this.isOpen;
+	}
+
+	scrollToTop() {
+		window.scroll(0, 0);
 	}
 }

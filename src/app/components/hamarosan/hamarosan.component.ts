@@ -10,5 +10,7 @@ export class HamarosanComponent implements OnInit {
 
 	url = environment.url;
 
-	ngOnInit(): void {}
+	ngOnInit(): void {
+		window.scroll(0, 0);
+	}
 }

@@ -16,7 +16,7 @@ const routes: Routes = [
 	{ path: 'szulinap', redirectTo: 'hamarosan' },
 	{
 		path: 'jelentkezes',
-		redirectTo: 'hamarosan',
+		component: JelentkezesComponent,
 	},
 	{ path: 'hamarosan', component: HamarosanComponent },
 	{ path: '**', redirectTo: '' },

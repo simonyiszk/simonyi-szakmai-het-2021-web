@@ -37,10 +37,9 @@ export class RegisterFormComponent {
 		private firestore: AngularFirestore,
 		readonly hostRef: ElementRef,
 	) {
-		this.professionalNightCollection =
-			this.firestore.collection('szakmai-est-test');
-		this.miniConfCollection = this.firestore.collection('minikonf-test');
-		this.birthdayCollection = this.firestore.collection('szulinap-test');
+		this.professionalNightCollection = this.firestore.collection('szakmai-est');
+		this.miniConfCollection = this.firestore.collection('minikonf');
+		this.birthdayCollection = this.firestore.collection('szulinap');
 
 		this.registerForm = fb.group({
 			events: fb.group({
@@ -103,6 +102,7 @@ export class RegisterFormComponent {
 			}
 
 			this.formSent.emit();
+			window.scroll(0, 0);
 			this.formClosed.emit();
 		}
 	}

@@ -3,10 +3,33 @@
 	width: 100%;
 	text-align: center;
 	color: #141414;
-	height: calc(100vh - 74px);
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+}
+
+.info-background {
+	background-color: #ffff3c;
+}
+
+.center {
+	text-align: center;
+}
+
+.info-container {
+	padding: 0px 25vw 70px 25vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+}
+
+.giveaway {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr;
+	grid-column-gap: 0px;
+	grid-row-gap: 0px;
 }
 
 p {
@@ -32,7 +55,7 @@ p {
 .date {
 	font-size: 71px;
 	font-family: "Gobold-High";
-	margin-top: 6vh;
+	margin: 6vh;
 }
 
 hr {
@@ -40,6 +63,56 @@ hr {
 	border: 2px solid #141414;
 	border-radius: 3px;
 	@apply mx-auto;
+}
+
+.line {
+	border-left: 8px solid #141414;
+	border-radius: 8px;
+	padding-left: 20px;
+	margin-bottom: 30px;
+}
+
+.info-container {
+	font-size: 26px;
+	font-family: "Roboto";
+	color: #141414;
+
+	p {
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		color: #141414;
+		margin: 30px 0 20px 0;
+		font-size: 30px;
+		font-family: "Gobold";
+		margin-top: 4vh;
+		scroll-margin-top: 100px;
+	}
+
+	h5 {
+		visibility: hidden;
+		margin-bottom: 40px;
+	}
+}
+
+a {
+	border-bottom: 1px solid #141414;
+}
+
+.link-text {
+	padding-top: 10px;
+	font-size: 16px;
+	text-align: center;
+
+	img {
+		height: 150px;
+	}
+}
+
+.indented {
+	padding-left: 20px;
+	font-size: 22px;
 }
 
 .decoration_1 {
@@ -162,6 +235,7 @@ hr {
 
 @media screen and (max-width: 680px) {
 	.filled {
+		margin-top: 120px;
 		font-size: 80px;
 		line-height: 70px;
 	}
@@ -205,6 +279,51 @@ hr {
 		width: 8em;
 		margin-right: -0.7em;
 		margin-top: 20vh;
+	}
+
+	.info-container {
+		padding: 0px 5vw 70px 5vw;
+	}
+
+	.giveaway {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-rows: repeat(2, 1fr);
+		grid-column-gap: 0px;
+		grid-row-gap: 0px;
+	}
+
+	.info-container {
+		font-size: 18px;
+		font-family: "Roboto";
+		color: #141414;
+
+		p {
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			color: #141414;
+			margin: 30px 0 20px 0;
+			font-size: 24px;
+			font-family: "Gobold";
+			margin-top: 4vh;
+			scroll-margin-top: 100px;
+		}
+
+		h5 {
+			visibility: hidden;
+			margin-bottom: 40px;
+		}
+
+		.indented {
+			font-size: 17px;
+		}
+
+		img {
+			margin-top: 40px;
+			width: 300px;
+		}
 	}
 }
 

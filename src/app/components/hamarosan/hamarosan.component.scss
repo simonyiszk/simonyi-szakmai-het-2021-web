@@ -1,8 +1,9 @@
 .container {
 	margin: 0 auto;
+	margin-top: 200px;
 	width: 100%;
 	color: #141414;
-	height: calc(100vh - 74px);
+	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -88,6 +89,10 @@ p {
 		width: 80vw;
 	}
 
+	p {
+		font-size: 18px;
+	}
+
 	.parent {
 		display: grid;
 		grid-template-columns: 1fr;
@@ -107,16 +112,22 @@ p {
 	}
 
 	h1 {
+		font-size: 38px;
+
 		&::after {
 			content: "";
 			display: block;
-			height: 8px;
+			height: 4px;
 			background: #141414;
 			transition: width 0.3s;
 			width: 100%;
-			border-radius: 14px;
+			border-radius: 4px;
 			margin-left: 2px;
 		}
+	}
+
+	img {
+		width: 200px;
 	}
 
 	a img {
