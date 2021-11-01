@@ -1,15 +1,17 @@
-<header>
-	<a routerLink="" class="logo">SIMONYI SZAKMAI HÉT</a>
+<header class="lowercase">
+	<a routerLink="/" class="logo uppercase">Simonyi szakmai hét</a>
 	<button (click)="changeNav()">
 		<img *ngIf="!isOpen" src="/assets/menu_white_24dp.svg" alt="" />
 		<img *ngIf="isOpen" src="/assets/close_white_24dp.svg" alt="" />
 	</button>
 	<nav [ngClass]="{ hidden: isOpen === false }">
-		<a routerLink="" (click)="onClick('#szakmaiest')">szakmai est</a>
-		<a routerLink="" (click)="onClick('#minikonf')">minikonferencia</a>
-		<a routerLink="" (click)="onClick('#szulinap')">szülinap</a>
+		<a routerLink="/" fragment="szakmaiest" (click)="onClick()">Szakmai est</a>
+		<a routerLink="/" fragment="minikonf" (click)="onClick()">
+			Minikonferencia
+		</a>
+		<a routerLink="/" fragment="szulinap" (click)="onClick()">Szülinap</a>
 		<a routerLink="/jelentkezes" (click)="scrollToTop(); isOpen = false">
-			jelentkezés
+			Jelentkezés
 		</a>
 	</nav>
 </header>

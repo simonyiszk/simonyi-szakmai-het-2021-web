@@ -1,5 +1,6 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -13,7 +14,10 @@ import { environment } from 'src/environments/environment';
 export class NavComponent implements OnInit {
 	isOpen?: boolean;
 
-	constructor(private viewportScroller: ViewportScroller) {}
+	constructor(
+		private viewportScroller: ViewportScroller,
+		private router: Router,
+	) {}
 
 	url = environment.url;
 
@@ -33,9 +37,10 @@ export class NavComponent implements OnInit {
 		}
 	}
 
-	onClick(elementId: string): void {
+	onClick(): void {
 		this.isOpen = false;
-		this.viewportScroller.scrollToAnchor(elementId);
+		// this.router.navigate([elementId], { fragment });
+		// this.viewportScroller.scrollToAnchor(elementId);
 	}
 
 	changeNav() {
