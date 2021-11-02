@@ -1,4 +1,13 @@
-.top-margin {
-	min-height: max(568px, calc(100vh - 202px));
-	@apply m-4 mt-6 pt-16;
+.form-container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.thank-you {
+	height: 100vh;
+	padding-top: 88px;
+	text-align: center;
+	font-weight: bold;
+	font-size: 30pt;
 }

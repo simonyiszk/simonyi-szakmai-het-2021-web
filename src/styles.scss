@@ -13,14 +13,17 @@ body {
 @font-face {
 	font-family: "Gobold";
 	src: url("./fonts/Gobold_Regular.otf");
+	font-display: swap;
 }
 @font-face {
 	font-family: "Gobold-Hollow-Bold";
 	src: url("fonts/Gobold_Hollow_Bold.otf");
+	font-display: swap;
 }
 @font-face {
 	font-family: "Gobold-High";
 	src: url("fonts/Gobold_High.otf");
+	font-display: swap;
 }
 
 html,

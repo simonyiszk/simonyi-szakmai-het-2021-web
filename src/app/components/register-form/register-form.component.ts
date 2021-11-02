@@ -18,7 +18,7 @@ import { uniOfAdvStudies } from './advancedStudies.constants';
 	styleUrls: ['./register-form.component.scss'],
 })
 export class RegisterFormComponent {
-	@Input() isOpen = false;
+	@Input() isOpen = true;
 
 	@Output() formClosed = new EventEmitter();
 	@Output() formSent = new EventEmitter();
@@ -66,6 +66,7 @@ export class RegisterFormComponent {
 				universityOfAdvancedStudies: [null, Validators.required],
 				otherUniOfAdvStudies: [''],
 			}),
+			gdpr: [false, [Validators.requiredTrue]],
 		});
 	}
 
@@ -150,5 +151,12 @@ export class RegisterFormComponent {
 		);
 
 		return !controlsTouched || !!oneChecked;
+	}
+
+	get isGdprErrorHidden(): boolean {
+		return (
+			!this.registerForm.get('gdpr')?.touched ||
+			!this.registerForm.get('gdpr')?.invalid
+		);
 	}
 }

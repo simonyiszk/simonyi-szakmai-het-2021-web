@@ -1,3 +1,10 @@
-<div class="top-margin">
-	<app-register-form-button></app-register-form-button>
+<div class="form-container">
+	<app-register-form
+		*ngIf="!formSent; else afterSent"
+		(formSent)="onFormSent()"
+	></app-register-form>
 </div>
+
+<ng-template #afterSent>
+	<h2 class="thank-you">Köszönjük a regisztrációdat!</h2>
+</ng-template>
