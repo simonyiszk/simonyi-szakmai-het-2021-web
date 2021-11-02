@@ -158,6 +158,18 @@
 		<label for="accomodation">Szeretnék szállást kérni a születésnapra.</label>
 	</div>
 
+	<div class="gdpr">
+		<div class="checkbox">
+			<input type="checkbox" id="gdpr" formControlName="gdpr" />
+			<label for="gdpr">
+				Beleegyezem, hogy az események szervezői kezeljék az adataimat.
+				<sup>*</sup>
+			</label>
+		</div>
+		<p [hidden]="isGdprErrorHidden">
+			Kötelező elfogadni az adatkezelési feltételeket!
+		</p>
+	</div>
+
 	<button type="submit" class="register-btn">Regisztrálok</button>
-	<button type="button" class="cancel-btn" (click)="onClose()">Mégsem</button>
 </form>

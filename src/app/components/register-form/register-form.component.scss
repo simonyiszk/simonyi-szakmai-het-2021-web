@@ -61,12 +61,15 @@ h2 {
 	height: 100%;
 	background-color: $darkgray;
 	overflow: hidden;
+	margin-top: 68px;
 }
 
 .modal-view {
 	border-radius: 15px;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 88px;
+	margin-bottom: 20px;
 }
 
 .checkbox {
@@ -87,6 +90,17 @@ h2 {
 		background-color: $darkgray;
 		border-color: $yellow;
 		margin-right: 11px;
+	}
+}
+.gdpr {
+	margin-bottom: 20px;
+
+	label sup {
+		color: $warning-red;
+	}
+
+	input.ng-touched.ng-invalid {
+		border-color: $warning-red;
 	}
 }
 
