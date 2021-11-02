@@ -39,8 +39,6 @@ export class NavComponent implements OnInit {
 
 	onClick(): void {
 		this.isOpen = false;
-		// this.router.navigate([elementId], { fragment });
-		// this.viewportScroller.scrollToAnchor(elementId);
 	}
 
 	changeNav() {
