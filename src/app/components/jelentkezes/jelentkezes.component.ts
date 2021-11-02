@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-jelentkezes',
-  templateUrl: './jelentkezes.component.html',
-  styleUrls: ['./jelentkezes.component.scss']
+	selector: 'app-jelentkezes',
+	templateUrl: './jelentkezes.component.html',
+	styleUrls: ['./jelentkezes.component.scss'],
 })
-export class JelentkezesComponent implements OnInit {
+export class JelentkezesComponent {
+	formSent = false;
+	constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+	onFormSent(): void {
+		this.formSent = true;
+	}
 }

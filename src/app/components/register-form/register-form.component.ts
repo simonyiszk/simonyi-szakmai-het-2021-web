@@ -83,7 +83,7 @@ export class RegisterFormComponent {
 				data[key] = dataGroup.get(key)?.value;
 			});
 
-			if (eventsGroup.get('profNight')?.value) {
+			/*if (eventsGroup.get('profNight')?.value) {
 				this.professionalNightCollection.add(data);
 			}
 			if (
@@ -100,7 +100,7 @@ export class RegisterFormComponent {
 			if (eventsGroup.get('birthday')?.value) {
 				const bdData = { ...data, accomodation: this.accomodation };
 				this.birthdayCollection.add(bdData);
-			}
+			}*/
 
 			this.formSent.emit();
 			window.scroll(0, 0);
