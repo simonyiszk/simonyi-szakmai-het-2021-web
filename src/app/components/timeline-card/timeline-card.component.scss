@@ -3,6 +3,7 @@
 	@screen sm {
 		@apply max-w-screen-sm;
 	}
+	width: 640px;
 	max-width: 90vw;
 	font-family: Roboto, sans-serif;
 }
@@ -38,4 +39,15 @@
 .timeline-card__description {
 	@apply col-span-2 mt-4;
 	// font-size: 15px;
+}
+
+.small-card {
+	text-align: center;
+	margin: 0 auto;
+	@screen sm {
+		@apply p-8;
+	}
+	@screen lg {
+		@apply p-12;
+	}
 }

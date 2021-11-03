@@ -1,11 +1,12 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 export interface TimelineCardProps {
-	title: string;
-	presenter: string;
-	description: string;
-	date: string;
-	image: string;
+	title?: string;
+	presenter?: string;
+	description?: string;
+	date?: string;
+	image?: string;
+	presenters?: string[];
 }
 
 @Component({
@@ -13,16 +14,7 @@ export interface TimelineCardProps {
 	templateUrl: './timeline-card.component.html',
 	styleUrls: ['./timeline-card.component.scss'],
 })
-export class TimelineCardComponent implements OnInit {
+export class TimelineCardComponent {
 	constructor() {}
-
-	@Input() props: TimelineCardProps = {
-		title: 'Timeline Card',
-		presenter: 'Timeline Card',
-		description: 'This is a timeline card component.',
-		date: '2020-01-01',
-		image: 'https://picsum.photos/200/300',
-	};
-
-	ngOnInit(): void {}
+	@Input() props?: TimelineCardProps;
 }

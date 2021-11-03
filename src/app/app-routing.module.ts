@@ -5,6 +5,7 @@ import { HamarosanComponent } from './components/hamarosan/hamarosan.component';
 import { JelentkezesComponent } from './components/jelentkezes/jelentkezes.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { MinikonfComponent } from './components/minikonf/minikonf.component';
+import { SzakmaiestComponent } from './components/szakmaiest/szakmaiest.component';
 import { SzulinapComponent } from './components/szulinap/szulinap.component';
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
 	},
 	{
 		path: 'szakmaiest',
-		component: MinikonfComponent,
+		component: SzakmaiestComponent,
 	},
 	{
 		path: 'minikonferencia',
