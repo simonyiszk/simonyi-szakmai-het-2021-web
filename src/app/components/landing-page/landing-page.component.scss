@@ -12,15 +12,15 @@
 		h2,
 		h1 {
 			mix-blend-mode: difference;
-			// filter: invert(1);
-			color: #ffff3c;
-			// color: #0000c3;
+			filter: invert(1);
+			// color: #ffff3c;
+			color: #0000c3;
 		}
 		hr {
 			mix-blend-mode: difference;
-			// filter: invert(1);
-			border-color: #ffff3c;
-			// border-color: #0000c3;
+			filter: invert(1);
+			// border-color: #ffff3c;
+			border-color: #0000c3;
 		}
 	}
 }
