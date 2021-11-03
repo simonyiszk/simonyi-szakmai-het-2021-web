@@ -18,7 +18,7 @@ export class MinikonfComponent {
 			date: 'Kedd, 17:15 - 17:55',
 			title: 'Egy tech cég szerverek nélkül',
 			description:
-				'Az egyre több területet lefedő serverless modellt alapja az AWS Lambda, az első népszerű Function as a Service szolgáltatás. Előadásomban megmutatom, hogy a Shapr3D-nél miért döntöttünk a modell használata mellett, hogyan írjuk a backend szolgáltatásainkat ebben a szellemben, miként üzemeltetjük őket, illetve, hogy hogyan vertelek át az előadás címével.',
+				'Az egyre több területet lefedő serverless modell alapja az AWS Lambda, az első népszerű "Function as a Service" szolgáltatás. Előadásomban megmutatom, hogy a Shapr3D-nél miért döntöttünk a modell használata mellett, hogyan írjuk a backend szolgáltatásainkat ebben a szellemben, miként üzemeltetjük őket, illetve, hogy hogyan vertelek át az előadás címével.',
 			image: 'assets/barnabás_gema.png',
 			presenter: 'Gema Barnabás - Shapr3D',
 		},
@@ -26,7 +26,7 @@ export class MinikonfComponent {
 			date: 'Kedd, 18:00 - 18:50',
 			title: 'DevOps a gyakorlatban: Adatfeldolgozás Microsoft Azure-ben',
 			description:
-				'A Bosch bemutatja legújabb adatgyűjtési platformját! Avagy hogyan sikerült egységísítííenünk a változó projektigényeket, és egy olyan közös, nyílt forráskódú megoldást nyújtani a Bosch csapatainak, ami a legtöbb igényt kielégíti - mindezt Microsoft Azure alapokon, a felhőben.',
+				'A Bosch bemutatja legújabb adatgyűjtési platformját! Avagy hogyan sikerült egységesítenünk a változó projektigényeket, és egy olyan közös, nyílt forráskódú megoldást nyújtani a Bosch csapatainak, ami a legtöbb igényt kielégíti - mindezt Microsoft Azure alapokon, a felhőben.',
 			image: 'assets/halmos_gyula.png',
 			presenter: 'Halmos Gyula - Bosch',
 		},
@@ -55,7 +55,7 @@ export class MinikonfComponent {
 			date: 'Szerda, 18:15 - 19:05',
 			title: 'Hogyan vigyünk nemzetközi sikerre egy saját digitális terméket?',
 			description:
-				'Hogyan indul el egy kicsi csapat egy új webes termék fejlesztésével? Hogyan lehet nemzetközi közönségnek tervezni és eljutni hozzájuk? Előadásomban a uxfol.io történetéről mesélek nektek, a színfalak mögötti részletekről, a kezdetektől egészen megvalósításig. Mindemellett a kezdeti nehézségekről és a mérnöki szemlélet fontosságáról is szót ejtünk az este folyamán.',
+				'Hogyan indul el egy kicsi csapat egy új webes termék fejlesztésével? Hogyan lehet nemzetközi közönségnek tervezni és eljutni hozzájuk? Előadásomban a uxfol.io történetéről mesélek nektek, a színfalak mögötti részletekről, a kezdetektől egészen a megvalósításig. Mindemellett a kezdeti nehézségekről és a mérnöki szemlélet fontosságáról is szót ejtünk az este folyamán.',
 			image: 'assets/pasztor_david.png',
 			presenter: 'Pásztor Dávid - uxstudio',
 		},

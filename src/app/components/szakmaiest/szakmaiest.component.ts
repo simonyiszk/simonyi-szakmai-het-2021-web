@@ -26,7 +26,7 @@ export class SzakmaiestComponent {
 			date: 'Hétfő, 18:55 - 19:30',
 			title: 'PéK: Webfejlesztés hosszútávon',
 			description:
-				'Az előadáson a Schönherz Kollégium egyik leghosszabb ideje üzemelő  webes alkalmazásának, a PéK-nek, a fejlesztésébe nyerhetnek betekintés a résztvevők. Átbeszéljük, hogy milyen kihívásokkal kell szembenéznie egy csapatnak, ha több mint 20 éven keresztül szeretne egy szoftvertes szolgáltatást biztosítani a kollégium lakóinak - szoftveres háttér, tehcnikai problémák, vagy HR? Minden aspektusról szó ejtünk!',
+				'Az előadáson a Schönherz Kollégium egyik leghosszabb ideje üzemelő  webes alkalmazásának, a PéK-nek, a fejlesztésébe nyerhetnek betekintés a résztvevők. Átbeszéljük, hogy milyen kihívásokkal kell szembenéznie egy csapatnak, ha több mint 20 éven keresztül szeretne egy szoftveres szolgáltatást biztosítani a kollégium lakóinak - szoftveres háttér, technikai problémák, vagy HR? Minden aspektusról szót ejtünk!',
 			image: 'assets/default.png',
 			presenter: 'Sepsi László - Kir-Dev',
 		},
