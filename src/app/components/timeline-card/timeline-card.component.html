@@ -1,0 +1,49 @@
+<div class="timeline-card" *ngIf="props">
+	<ng-container *ngIf="!props.image; else card">
+		<div class="small-card">
+			<h4 class="mb-3 text-xl font-bold text-[#ffff3c]">
+				{{ props.title }}
+			</h4>
+			<h6 class="text-yellow font-bold">
+				{{ props.date }}
+			</h6>
+		</div>
+	</ng-container>
+	<ng-template #card>
+		<div class="timeline-content">
+			<ng-container *ngIf="props.image">
+				<div class="timeline-card__image">
+					<img
+						src="{{ props.image }}"
+						class="bg-rose-500"
+						alt="{{ props.presenter }} arcképe"
+					/>
+				</div>
+			</ng-container>
+			<div class="timeline-card__content">
+				<h4 class="mb-3 text-xl font-bold text-[#ffff3c]">{{ props.title }}</h4>
+				<h5
+					class="mb-1 text-sm uppercase"
+					*ngIf="props.presenter !== undefined"
+				>
+					{{ props.presenter }}
+				</h5>
+				<div *ngIf="props.presenters !== undefined">
+					<h5
+						class="mb-1 text-sm uppercase"
+						*ngFor="let presenter of props.presenters"
+					>
+						{{ presenter }}
+					</h5>
+				</div>
+				<h6
+					class="text-yellow font-bold text-[#ffff3c]"
+					[ngClass]="{ 'ceter-text': !props?.image }"
+				>
+					{{ props.date }}
+				</h6>
+			</div>
+			<p class="timeline-card__description">{{ props.description }}</p>
+		</div>
+	</ng-template>
+</div>

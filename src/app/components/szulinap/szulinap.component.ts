@@ -1,15 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-szulinap',
-  templateUrl: './szulinap.component.html',
-  styleUrls: ['./szulinap.component.scss']
+	selector: 'app-szulinap',
+	templateUrl: './szulinap.component.html',
+	styleUrls: ['./szulinap.component.scss'],
 })
-export class SzulinapComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class SzulinapComponent {
+	constructor() {}
 }
