@@ -10,6 +10,7 @@
 
 .timeline-content {
 	@apply relative p-3 grid gap-4 items-center;
+	padding: 1.5rem;
 	@screen sm {
 		@apply p-8;
 	}
@@ -44,6 +45,7 @@
 .small-card {
 	text-align: center;
 	margin: 0 auto;
+	padding: 2rem;
 	@screen sm {
 		@apply p-8;
 	}
