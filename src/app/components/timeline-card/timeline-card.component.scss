@@ -1,0 +1,40 @@
+.timeline-card {
+	@apply text-white bg-[#141414] rounded-2xl relative;
+	@screen sm {
+		@apply max-w-screen-sm;
+	}
+	max-width: 90vw;
+}
+
+.timeline-content {
+	@apply relative p-3 grid gap-4 items-center;
+	@screen sm {
+		@apply p-8;
+	}
+	@screen lg {
+		@apply p-12;
+	}
+	@apply justify-items-center;
+	grid-template-columns: auto 1fr;
+}
+
+.timeline-card__image {
+	@apply col-span-2 border-8 rounded-full p-2 border-[#ffffff];
+	@screen sm {
+		@apply col-span-1;
+	}
+
+	width: fit-content;
+	max-width: 232px;
+	height: fit-content;
+	max-height: 232px;
+
+	img {
+		@apply rounded-full w-48 h-48;
+	}
+}
+
+.timeline-card__description {
+	@apply col-span-2 mt-4;
+	// font-size: 15px;
+}

@@ -5,10 +5,8 @@
 		<img *ngIf="isOpen" src="/assets/close_white_24dp.svg" alt="" />
 	</button>
 	<nav [ngClass]="{ hidden: isOpen === false }">
-		<a routerLink="/" fragment="szakmaiest" (click)="onClick()">Szakmai est</a>
-		<a routerLink="/" fragment="minikonf" (click)="onClick()">
-			Minikonferencia
-		</a>
+		<a routerLink="/szakmaiest" (click)="onClick()">Szakmai est</a>
+		<a routerLink="/minikonferencia" (click)="onClick()">Minikonferencia</a>
 		<a routerLink="/" fragment="szulinap" (click)="onClick()">Szülinap</a>
 		<a routerLink="/jelentkezes" (click)="scrollToTop(); isOpen = false">
 			Jelentkezés

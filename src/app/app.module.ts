@@ -21,6 +21,8 @@ import { HamarosanComponent } from './components/hamarosan/hamarosan.component';
 import { RegisterFormComponent } from './components/register-form/register-form.component';
 import { RegisterFormButtonComponent } from './components/register-form-button/register-form-button.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { TimelineCardComponent } from './components/timeline-card/timeline-card.component';
+import { DecorationsComponent } from './common/decorations/decorations.component';
 
 @NgModule({
 	declarations: [
@@ -36,6 +38,8 @@ import { FooterComponent } from './components/footer/footer.component';
 		RegisterFormComponent,
 		RegisterFormButtonComponent,
   FooterComponent,
+  TimelineCardComponent,
+  DecorationsComponent,
 	],
 	imports: [
 		BrowserModule,
