@@ -8,16 +8,18 @@
 	flex-direction: column;
 	justify-content: center;
 	min-height: max(568px, 100vh);
-	h2,
-	h1 {
-		mix-blend-mode: difference;
-		// filter: invert(1);
-		color: #ffff3c;
-		// color: #3c3cff;
-	}
-	hr {
-		mix-blend-mode: difference;
-		border-color: #ffff3c;
+	@supports (mix-blend-mode: difference) {
+		h2,
+		h1 {
+			mix-blend-mode: difference;
+			// filter: invert(1);
+			color: #ffff3c;
+			// color: #3c3cff;
+		}
+		hr {
+			mix-blend-mode: difference;
+			border-color: #ffff3c;
+		}
 	}
 }
 
