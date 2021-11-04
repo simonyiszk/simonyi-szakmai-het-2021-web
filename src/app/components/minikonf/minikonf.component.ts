@@ -57,7 +57,7 @@ export class MinikonfComponent {
 			description:
 				'Hogyan indul el egy kicsi csapat egy új webes termék fejlesztésével? Hogyan lehet nemzetközi közönségnek tervezni és eljutni hozzájuk? Előadásomban a uxfol.io történetéről mesélek nektek, a színfalak mögötti részletekről, a kezdetektől egészen a megvalósításig. Mindemellett a kezdeti nehézségekről és a mérnöki szemlélet fontosságáról is szót ejtünk az este folyamán.',
 			image: 'assets/pasztor_david.png',
-			presenter: 'Pásztor Dávid - uxstudio',
+			presenter: 'Pásztor Dávid, Vass Bence - UX studio',
 		},
 		{
 			date: 'Szerda, 19:15 - 20:05',
