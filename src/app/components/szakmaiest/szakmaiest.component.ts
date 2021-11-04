@@ -20,7 +20,7 @@ export class SzakmaiestComponent {
 			description:
 				'Morzéznál valódi billentyűn, de nincs rádiód? Használd a számtalan PC-s Morse alkalmazást ezzel az egyszerű trükkel! A Big Enter mintájára.',
 			image: 'assets/default.png',
-			presenter: 'Csókás Bence - H5KFU',
+			presenter: 'Csókás Bence - HA5KFU',
 		},
 		{
 			date: 'Hétfő, 18:55 - 19:30',
