@@ -11,6 +11,9 @@ export class MinikonfComponent {
 
 	items: TimelineCardProps[] = [
 		{
+			title: 'Kedd',
+		},
+		{
 			date: 'Kedd, 17:00',
 			title: 'Megnyitó',
 		},
@@ -46,6 +49,9 @@ export class MinikonfComponent {
 		{
 			date: 'Kedd, 21:15',
 			title: 'Nyereményjáték sorsolás',
+		},
+		{
+			title: 'Szerda',
 		},
 		{
 			date: 'Szerda, 18:00',

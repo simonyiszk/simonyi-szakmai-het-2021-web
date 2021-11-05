@@ -1,5 +1,5 @@
 .timeline-card {
-	@apply text-white bg-[#141414] rounded-2xl relative;
+	@apply text-white rounded-2xl relative;
 	@screen sm {
 		@apply max-w-screen-sm;
 	}
