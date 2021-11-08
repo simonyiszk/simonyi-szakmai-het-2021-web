@@ -39,12 +39,7 @@
 			<label for="confDayTwo">Minikonferencia 2. nap - 11.10.</label>
 		</div>
 		<div class="checkbox">
-			<input
-				type="checkbox"
-				id="birthday"
-				formControlName="birthday"
-				(click)="setAccomodation()"
-			/>
+			<input type="checkbox" id="birthday" formControlName="birthday" />
 			<label for="birthday">Születésnap - 11.12.</label>
 		</div>
 
@@ -142,20 +137,6 @@
 			<label for="year">Hanyadév</label>
 			<input id="year" placeholder="3" type="number" formControlName="year" />
 		</div>
-	</div>
-
-	<div
-		class="checkbox accomodation"
-		[ngClass]="{ disabled: isAccomodationDisabled }"
-	>
-		<input
-			type="checkbox"
-			id="accomodation"
-			[(ngModel)]="accomodation"
-			[ngModelOptions]="{ standalone: true }"
-			[disabled]="isAccomodationDisabled"
-		/>
-		<label for="accomodation">Szeretnék szállást kérni a születésnapra.</label>
 	</div>
 
 	<div class="gdpr">
