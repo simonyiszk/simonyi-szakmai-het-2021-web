@@ -43,7 +43,7 @@ export class MinikonfComponent {
 				'Dr Szalay Zsolt - A BME Automated Drive Laboratory vezetője',
 				'Dr. Aradi Szilárd - Autonóm rendszerek Nemzeti Laboratórium vezető kutatója',
 				'Gajdán Miklós - Az “Év autója”-zsűritag, a Totalcar újságírója',
-				'Sturcz Antal - A Totalcar újságírója',
+				'Bolla György - A Totalcar újságírója',
 			],
 		},
 		{
