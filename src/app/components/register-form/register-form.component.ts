@@ -125,14 +125,6 @@ export class RegisterFormComponent {
 		);
 	}
 
-	setAccomodation(): void {
-		this.setEventsTouched();
-		this.isAccomodationDisabled = !!(
-			this.registerForm.get('events') as FormGroup
-		).get('birthday')?.value;
-		if (this.isAccomodationDisabled) this.accomodation = false;
-	}
-
 	get isFormFullWidth(): boolean {
 		return this.hostRef?.nativeElement.offsetWidth <= 400;
 	}
