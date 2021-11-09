@@ -69,7 +69,7 @@ export class MinikonfComponent {
 			date: 'Szerda, 19:15 - 20:05',
 			title:
 				'Sikeres és érdekes intercom projektek, avagy mit használnak a hazai broadcasterek?',
-			description: 'hamarosan',
+			description: 'Érdekel, hogy mit keres egy öreg AC-s a broadcast audio területen? Vajon mennyire kicsi a hazai szakma? Előadásomban a fenti kérdéseken túl az intercom rendszerek világába kalauzollak Titeket és a teljesség igénye nélkül válogatok az elmúlt évek emlékezetes TV-s projektjeiből Nektek.',
 			image: 'assets/cserepes_andras.png',
 			presenter: 'Cserpes András - Broadmax',
 		},
